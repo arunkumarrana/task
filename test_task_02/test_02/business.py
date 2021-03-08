@@ -4,7 +4,7 @@ from app import RESOLVED_PERMISSIONS
 
 
 def get_unpaginated_client_users(departament_id):
-    """generates the list of all clients as a drop down
+    """generates the list of all clients as a drop down..
     """
     client_users_list = list(mongo.client_user.find({
         "departament_id": departament_id
