@@ -22,7 +22,7 @@ RESOLVED_PERMISSIONS = dict()
 
 @api.before_first_request
 def resolve_permissions():
-    mongo = make_mongo() 
+    mongo = make_mongo()
     permissions = mongo['permissions'].find({'enabled': True})
     for permission in permissions:
         allowed_routes = permission.get('routes', [])
