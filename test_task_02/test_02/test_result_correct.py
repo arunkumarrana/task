@@ -39,6 +39,4 @@ def client():
 
 def test_call_view_function(client):
     result = client.get('list_client_user/58884ff19c5d396319ef9c09')
-    #print("abc")
-    print(result)
     assert hashlib.sha224(result.data).hexdigest() == "f470e6eba2bfd699be6d5abb481fe10f73e26cf2db6b7e3fcca0bc2a"
